@@ -14,7 +14,6 @@
 | **ux-writing.md** | UX writing 規則：英文／日文介面文案必讀文件路徑與摘要。 |
 | **design-examples/** | 設計範例：`Platform example`、`Learner example`（可下載給同事參考）。 |
 | **ux-writing-guidelines/** | UX 撰寫指南：`English`（Platform UX Writing Guideline）、`日本語`（ガイドライン・用語索引）。 |
-| **scalar-branding-override.css** | Scalar API 文件品牌覆寫（僅顏色與字型）。搭配規則 `.cursor/rules/scalar-api-docs-branding.mdc` 使用。 |
 | **README.md** | 本說明。 |
 
 ---
