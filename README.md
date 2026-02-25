@@ -7,14 +7,13 @@
 ## 內容（皆在 `.cursor/` 內）
 
 - **`.cursor/rules/`** — Cursor 規則（.mdc）
-  - `company-design-system.mdc`：公司設計系統總則（tokens、Admin/Platform、Figma 流程）
-  - `ux-writing.mdc`：UX writing（英文／日文介面文案）
+  - `company-design-system.mdc`：公司設計系統總則（tokens、Admin/Platform、Figma 流程；介面文案見 company-design-system/ux-writing.md）
   - `auto-push.mdc`：變更後自動 push（可依專案修改或關閉）
   - `README.md`：規則說明
 - **`.cursor/company-design-system/`** — Design tokens 與規範
   - `all-variables.css`：唯一 token 來源
   - `Claude-design-system-updates-2026-02-20.md`：元件規格與檢查表
-  - `ux-writing.md`：UX writing 規則與必讀文件路徑
+  - `ux-writing.md`：**UX writing 唯一來源**（英文／日文介面文案、voice/tone、必守摘要）
   - `README.md`：設計系統說明
 
 ---

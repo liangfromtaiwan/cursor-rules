@@ -1,6 +1,6 @@
 ---
 description: 公司設計系統總則。含 tokens、Admin/Platform 元件與網格、從 Figma 實作公司產品時的流程與驗收。代表公司的產品一律使用 .cursor/company-design-system/all-variables.css。
-globs: "**/*.html,**/*.css,**/*.tsx,**/*.jsx,.cursor/company-design-system/**,image/**"
+globs: "**/*.html,**/*.css,**/*.tsx,**/*.jsx,**/*.md,**/*.mdc,.cursor/company-design-system/**"
 alwaysApply: false
 ---
 
