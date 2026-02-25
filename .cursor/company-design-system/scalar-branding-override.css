@@ -1,0 +1,45 @@
+/**
+ * Scalar API 文件 — 最小限度品牌覆寫（僅顏色 + 字型）
+ * 使用前請先載入公司 design tokens：all-variables.css
+ * 依需要調整對應的 --colors-* / --sem-* 變數。
+ */
+
+/* 字型：與公司產品一致（若專案已引入 Noto Sans TC） */
+:root {
+  --scalar-font: 'Noto Sans TC', 'Inter', sans-serif;
+  --scalar-font-code: 'JetBrains Mono', 'Noto Sans Mono', monospace;
+}
+
+/* ========== Light 模式 ========== */
+.light-mode {
+  /* 文字 */
+  --scalar-color-1: var(--colors-sand-12, #21201c);
+  --scalar-color-2: var(--colors-sand-11, #63635e);
+  --scalar-color-3: var(--colors-sand-10, #82827c);
+  /* 強調色（連結、按鈕等） */
+  --scalar-color-accent: var(--colors-blue-9, #0090ff);
+  /* 背景 */
+  --scalar-background-1: var(--colors-sand-1, #fdfdfc);
+  --scalar-background-2: var(--colors-sand-2, #f9f9f8);
+  --scalar-background-3: var(--colors-sand-3, #f1f2f2);
+  --scalar-background-accent: var(--colors-blue-1, #fbfdff);
+  /* 邊框 */
+  --scalar-border-color: var(--colors-sand-4, #e9e8e6);
+}
+
+/* ========== Dark 模式 ========== */
+.dark-mode {
+  /* 文字 */
+  --scalar-color-1: var(--colors-sand-12, #eeeeec);
+  --scalar-color-2: var(--colors-sand-11, #b5b3ad);
+  --scalar-color-3: var(--colors-sand-10, #7c7b74);
+  /* 強調色 */
+  --scalar-color-accent: var(--colors-blue-8, #5eb1ef);
+  /* 背景 */
+  --scalar-background-1: var(--colors-sand-1, #111110);
+  --scalar-background-2: var(--colors-sand-2, #191918);
+  --scalar-background-3: var(--colors-sand-3, #222221);
+  --scalar-background-accent: var(--colors-blue-alpha-3, rgba(0, 143, 245, 0.1));
+  /* 邊框 */
+  --scalar-border-color: var(--colors-sand-4, #2a2a28);
+}
