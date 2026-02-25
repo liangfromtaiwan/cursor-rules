@@ -21,12 +21,12 @@
 
 ## 二、英文 UX Writing（English）— 使用英文時必讀
 
-**必參照**：以下檔案與資料夾。
+**必參照**：以下檔案與資料夾（已收錄於本專案）。
 
 | 類型 | 路徑 |
 |------|------|
-| 資料夾 | `/Users/liang/Downloads/Private & Shared 2/Platform UX Writing Guideline` |
-| 主文件 | `/Users/liang/Downloads/Private & Shared 2/Platform UX Writing Guideline 22673b65c91481778eaaec2abead2c1c.md` |
+| 資料夾 | `docs/ux-writing/English/UX Writing Guideline` |
+| 主文件 | `docs/ux-writing/English/UX Writing Guideline/UX Writing Guideline 22673b65c91481778eaaec2abead2c1c.md` |
 
 **摘要**（主文件內規範）：
 
@@ -49,8 +49,8 @@
 
 | 類型 | 路徑 |
 |------|------|
-| 資料夾 | `/Users/liang/Downloads/Private & Shared 3/Platform UXライティングガイドライン` |
-| 主文件 | `/Users/liang/Downloads/Private & Shared 3/Platform UXライティングガイドライン 22673b65c9148038a403e9c5e352b42f.md` |
+| 資料夾 | `docs/ux-writing/日本語/UXライティングガイドライン` |
+| 主文件 | `docs/ux-writing/日本語/UXライティングガイドライン/UXライティングガイドライン 22673b65c9148038a403e9c5e352b42f.md` |
 
 - 日文介面文案的完整書寫準則；主文件內含清單／CSV 連結，實務時須一併參照同資料夾內容。
 
@@ -58,8 +58,8 @@
 
 | 類型 | 路徑 |
 |------|------|
-| 資料夾 | `/Users/liang/Downloads/Private & Shared 4/用語索引` |
-| 主文件 | `/Users/liang/Downloads/Private & Shared 4/用語索引 22673b65c91480418e22ed5dc6381255.md` |
+| 資料夾 | `docs/ux-writing/日本語/用語索引` |
+| 主文件 | `docs/ux-writing/日本語/用語索引/用語索引 22673b65c91480418e22ed5dc6381255.md` |
 
 - 已核准的日文用語與用詞選擇；撰寫日文時須**優先採用索引內用語**，以維持全產品一致。
 
@@ -69,5 +69,5 @@
 
 ## 四、與 Cursor 的搭配
 
-- 在 Cursor 中啟用 **ux-writing** 規則（`.cursor/rules/ux-writing.mdc`）後，AI 在產出或修改介面文案時會依本文件與上述**依語系對應的** Guideline／用語索引執行。
-- 本文件位於 **`company-design-system/ux-writing.md`**，與公司設計系統其他規範（tokens、元件、版面）同屬一體，可一併提供給設計師與開發者使用。
+- 在 Cursor 中啟用 **company-design-system** 規則後，AI 產出或修改介面文案時會依本文件與上述**依語系對應的** Guideline／用語索引執行。
+- 本文件位於 **`.cursor/company-design-system/ux-writing.md`**，與公司設計系統其他規範（tokens、元件、版面）同屬一體；必讀文件已收錄於 **`docs/ux-writing/`**。

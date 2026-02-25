@@ -16,6 +16,9 @@
   - `Claude-design-system-updates-2026-02-20.md`：元件規格與檢查表
   - `ux-writing.md`：UX writing 規則與必讀文件路徑
   - `README.md`：設計系統說明
+- **`docs/`** — 規則與範例所參照的檔案（可選一併複製到專案）
+  - `docs/ux-writing/`：英文／日文 UX Writing Guideline、用語索引
+  - `docs/design-examples/`：Platform／Learner 設計範例
 
 ---
 

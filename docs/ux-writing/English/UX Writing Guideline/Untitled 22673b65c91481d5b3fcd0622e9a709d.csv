@@ -1,0 +1,51 @@
+﻿Affected Areas,Category,Rules,Examples,Notes
+All,UI Simplicity,"Keep sentences less formal and concise. 
+Writing style is determined based on content area. (CTA)
+=
+To some extent, colloquial sayings that are not precisely adhering to exact grammar can be tolerated for the sake of conciseness and scannability.","❌ ”Would you like to delete this item”
+
+✅ ”Delete this item?”",https://codelabs.developers.google.com/codelabs/material-communication-guidance#0
+All,Mental Model,"Avoid combining first and second person (me/my, you/your) in the same sentence","❌ ”Change your profile in My Account”
+
+✅ ”Change your profile in account setting”",
+All,Readability,"Only communicate the essential information. Avoid presenting too much details that might overwhelm the users ","❌ ”You have exceeded the maximum number of login attempts allowed for this account. For your security, the account has been temporarily locked for 15 minutes. You can try again after that period, or reset your password if you suspect unauthorized access.”
+
+✅ Too many login attempts. Try again in 15 min or reset your password.”",
+All,Accessibility,"Begin the sentence with a user’s goal to keep the message clear, relevant, and focused on user’s task. Start the sentence with To + user goal
+
+Then follow with sentences that explain actions needed to complete the task.","❌ ”Navigate to API settings to reset the API key” 
+
+✅ ”To reset the API key, navigate to API settings.”",
+Image,Accessibility,"For all the images displayed, add alt text (up to 125 characters) or adjacent texts.
+
+It helps visually-impaired users and also sighted users when image isn’t loading properly.","❌ Not clear – “Two people” 
+❌ Too long – “Two 20-something individuals smiling at each other in a grassy park, captured in 4K in May 2024 during summer.” 
+
+✅ “Two young people smiling together at a park.”",https://m2.material.io/design/usability/accessibility.html#writing
+Buttons,Readability,"For primary action buttons, use a present-tense verb + object that clearly describes what the action will affect (e.g., “Create New Project”, “Save Changes”).","❌ ”New API Key” “Save”
+
+✅ ”Create New API Key” “Save Changes”",
+Buttons,UI Simplicity,"For secondary or non-primary action buttons, use single, concise words whenever possible (e.g., ""Edit"", ""Delete"", ""Details"")
+
+Ensure the surrounding UI (headings, labels, or component titles) provides enough context so the button text can remain short without causing confusion.","❌ ”Inactivate this API key” “View Details”
+
+✅ ”Inactivate” “Details”",
+"Buttons, Labels",UI Simplicity,"Labels and buttons identify what a control or element does, so mentioning the type of element or control becomes redundant.
+
+Don’t refer to UI control or element in button or label text.","❌ ”Click the Continue button”
+
+✅ ”Click Continue”",
+Modal Title,Readability,Keep modal titles brief and start with a present-tense verb to clearly communicate the action. Use the description to provide additional context or details.,"❌ ”Are you sure you want to proceed with deleting this file?” 
+
+✅ 
+Modal title: ”Delete this API Key?”
+Description: “This action will permanently delete the selected API key. Any systems currently using this key will no longer be able to authenticate.”",
+Modal Title,Accessibility,Keep the modal title clear and identify what action is required.,"❌ ”Are you sure?” 
+
+✅ ”Delete API Key?”",
+Description,Readability,"Keep paragraphs simple. If a description exceeds 3 lines, revise the content and UI placement to keep it within 2–3 lines.","❌ ”Enter your API key in the box below to enable integration with external systems. Make sure the key has the necessary permissions and is kept confidential to avoid unauthorized access.” 
+
+✅ ”Enter your API key to connect external systems. Keep it confidential to protect your account.”",
+Buttons,Consistency,"For Button text, capitalize only the first character of the first word within the sentence.","❌ ”Copy Link” “copy link” 
+
+✅ ”Copy link”",

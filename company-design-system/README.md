@@ -1,6 +1,7 @@
 # 公司設計系統（company-design-system/）
 
-本資料夾為公司設計系統的 **token 與規範來源**，供在 Cursor 內產出「代表公司」的產品時使用（POC、admin、platform、後台等）。
+本資料夾位於 **`.cursor/company-design-system/`**，為專案內唯一設計系統來源（與 `.cursor/rules` 同屬 `.cursor`，請勿在專案根目錄重複放置）。  
+以下為公司設計系統的 **token 與規範來源**，供在 Cursor 內產出「代表公司」的產品時使用（POC、admin、platform、後台等）。
 
 ---
 
@@ -35,4 +36,4 @@
 | 版面 | 12 欄網格，僅允許 span 12 / 8 / 6 / 4 / 3 |
 
 細節見 **Claude-design-system-updates-2026-02-20.md**。  
-Platform 範例路徑：`/Users/liang/Desktop/Design files/company-design-system/examples/Platform`。
+Platform／Learner 範例路徑：**`docs/design-examples/Platform example`**、**`docs/design-examples/Learner example`**。

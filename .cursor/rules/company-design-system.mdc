@@ -1,6 +1,6 @@
 ---
-description: 公司設計系統總則。含 tokens、Admin/Platform 元件與網格、從 Figma 實作公司產品時的流程與驗收。代表公司的產品一律使用 company-design-system/all-variables.css。
-globs: "**/*.html,**/*.css,**/*.tsx,**/*.jsx,company-design-system/**,image/**"
+description: 公司設計系統總則。含 tokens、Admin/Platform 元件與網格、從 Figma 實作公司產品時的流程與驗收。代表公司的產品一律使用 .cursor/company-design-system/all-variables.css。
+globs: "**/*.html,**/*.css,**/*.tsx,**/*.jsx,.cursor/company-design-system/**,image/**"
 alwaysApply: false
 ---
 
@@ -9,7 +9,8 @@ alwaysApply: false
 **適用對象**：  
 - **代表公司的產品**（POC、admin、platform、後台、管理介面）：依本規則的 token、Admin 規格與 Figma 實作流程。
 
-**原則**：一律使用設計系統的 tokens、元件規格與版面規範，**禁止**硬編碼色碼、魔術數字或偏離既有元件規格。
+**原則**：一律使用設計系統的 tokens、元件規格與版面規範，**禁止**硬編碼色碼、魔術數字或偏離既有元件規格。  
+**介面文案（UX writing）**：須遵守 **`.cursor/company-design-system/ux-writing.md`**（日文／英文必讀文件路徑與 voice/tone 見該檔）。
 
 ---
 
@@ -17,7 +18,7 @@ alwaysApply: false
 
 ### 1.1 公司產品（POC、admin、platform）— 必用
 
-- **唯一 token 來源**：專案內 **`company-design-system/all-variables.css`**。  
+- **唯一 token 來源**：專案內 **`.cursor/company-design-system/all-variables.css`**。  
 - 實作時必須引入此檔案，所有顏色、間距、圓角、字級等皆使用檔案內變數。
 
 **Token 使用優先順序（嚴格遵守）：**
@@ -57,7 +58,7 @@ alwaysApply: false
 1. **取得設計脈絡**：`get_design_context(fileKey, nodeId)`；過大時先 `get_metadata` 再對子節點取 context。
 2. **取得視覺參考**：`get_screenshot(fileKey, nodeId)` 作為實作與驗收依據。
 3. **下載素材**：依 Figma 回傳的圖片/SVG 下載；若有 localhost 來源則直接使用，不替換為其他圖庫。存放於專案 `image/` 或既有約定目錄。
-4. **對應 token 並實作**：將 Figma 的顏色、間距、字級對應到 **`company-design-system/all-variables.css`** 的 `--sem-*` / `--tokens-*` / `--spacing-*` / `--radius-*` / `--colors-*`。Figma MCP 若產出 React/Tailwind，僅作設計與結構參考，最終產出依專案技術棧。
+4. **對應 token 並實作**：將 Figma 的顏色、間距、字級對應到 **`.cursor/company-design-system/all-variables.css`** 的 `--sem-*` / `--tokens-*` / `--spacing-*` / `--radius-*` / `--colors-*`。Figma MCP 若產出 React/Tailwind，僅作設計與結構參考，最終產出依專案技術棧。
 5. **驗收**：對照截圖檢查版面、字型、顏色、間距與互動狀態；確認皆使用公司 token，無硬編碼。
 
 ### 2.3 技術棧與實作原則（從 Figma 實作時）
@@ -128,9 +129,10 @@ alwaysApply: false
 
 | 用途 | 路徑 |
 |------|------|
-| 公司 Design tokens（必用） | `company-design-system/all-variables.css` |
-| 規格更新與檢查表 | `company-design-system/Claude-design-system-updates-2026-02-20.md` |
-| Platform 範例（layout、表格、表單、Dialog） | `/Users/liang/Desktop/Design files/company-design-system/examples/Platform` |
+| 公司 Design tokens（必用） | `.cursor/company-design-system/all-variables.css` |
+| 規格更新與檢查表 | `.cursor/company-design-system/Claude-design-system-updates-2026-02-20.md` |
+| **UX writing**（介面文案，日／英必讀文件路徑） | **`.cursor/company-design-system/ux-writing.md`** |
+| Platform 範例（layout、表格、表單、Dialog） | `docs/design-examples/Platform example` |
 
 Platform 範例含：登入、Sidebar 展開/收合、Drawer、平台主畫面+表格、Dialog / Alert Dialog。實作 admin/platform 時須與其 layout、導航、表格、表單、對話框模式一致。
 
@@ -154,7 +156,7 @@ Platform 範例含：登入、Sidebar 展開/收合、Drawer、平台主畫面+�
 
 - [ ] 版面、對齊、間距與 Figma 一致
 - [ ] 字型、字級、字重與設計系統一致
-- [ ] 顏色皆使用 `var(--*)` token（company-design-system/all-variables.css）
+- [ ] 顏色皆使用 `var(--*)` token（.cursor/company-design-system/all-variables.css）
 - [ ] 互動狀態（hover / active / disabled）已實作
 - [ ] 素材路徑正確、不依賴未授權圖庫
 - [ ] 無障礙基本要求已滿足（可聚焦、語意標籤等）
@@ -164,5 +166,5 @@ Platform 範例含：登入、Sidebar 展開/收合、Drawer、平台主畫面+�
 ## 七、設計師使用方式
 
 - 在 Cursor 中進行**公司產品**或**從 Figma 實作 UI** 時，請啟用本規則（**company-design-system**）。
-- 製作 POC、admin、platform 時，一律依本規則與 `company-design-system/` 資料夾內檔案執行。
-- 細節與更新紀錄見 **`company-design-system/README.md`** 與 **`Claude-design-system-updates-2026-02-20.md`**。
+- 製作 POC、admin、platform 時，一律依本規則與 `.cursor/company-design-system/` 資料夾內檔案執行。
+- 細節與更新紀錄見 **`.cursor/company-design-system/README.md`** 與 **`Claude-design-system-updates-2026-02-20.md`**。
