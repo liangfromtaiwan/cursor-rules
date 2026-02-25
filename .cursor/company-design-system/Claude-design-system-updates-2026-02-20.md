@@ -11,19 +11,15 @@ This document records all updates made to the company-design-system skill.
 ### 1. Sidebar Navigation
 
 #### Dimensions
-| Property | Old Value | New Value |
-|----------|-----------|-----------|
-| Width (expanded) | 240px | **256px** |
-| Width (collapsed) | 64px | 64px (unchanged) |
+- **Width (expanded)**: 256px
+- **Width (collapsed)**: 64px
 
 #### Colors
-| Element | Old Value | New Value |
-|---------|-----------|-----------|
-| Background | White | **`var(--colors-sand-1)`** (#fdfdfc - Warm Neutral/Neutral 1) |
-| Border-right | `var(--colors-gray-alpha-6)` | **`var(--colors-sand-3)`** (#f1f2f2 - Warm Neutral/Neutral 3) |
+- **Background**: `var(--colors-sand-1)` (#fdfdfc - Warm Neutral/Neutral 1)
+- **Border-right**: `1px solid var(--colors-sand-3)` (#f1f2f2 - Warm Neutral/Neutral 3)
 
 #### Tooltip (Collapsed State)
-Added detailed tooltip specifications when sidebar is collapsed:
+When sidebar is collapsed, hovering over icons shows tooltips:
 - **Position**: Right side of icon (left: 64px)
 - **Background**: `var(--colors-sand-12)` (dark)
 - **Text color**: `var(--tokens-colors-white-contrast)` (white)
@@ -41,30 +37,22 @@ Added detailed tooltip specifications when sidebar is collapsed:
 ### 2. Top Header Bar
 
 #### Dimensions
-| Property | Old Value | New Value |
-|----------|-----------|-----------|
-| Height | 64px | **56px** |
+- **Height**: 56px
 
 #### Colors
-| Element | Old Value | New Value |
-|---------|-----------|-----------|
-| Background | White | **`var(--colors-sand-1)`** (#fdfdfc - Warm Neutral/Neutral 1) |
-| Border-bottom | `var(--colors-gray-alpha-6)` | `var(--colors-gray-alpha-6)` (unchanged) |
+- **Background**: `var(--colors-sand-1)` (#fdfdfc - Warm Neutral/Neutral 1)
+- **Border-bottom**: `var(--colors-gray-alpha-6)`
 
 ---
 
 ### 3. Drawer Form
 
 #### Dimensions
-| Property | Old Value | New Value |
-|----------|-----------|-----------|
-| Width | 560px | **720px** |
+- **Width**: 720px
 
 #### Colors
-| Element | Old Value | New Value |
-|---------|-----------|-----------|
-| Background | White | **`var(--colors-sand-1)`** (#fdfdfc - Warm Neutral/Neutral 1) |
-| Box-shadow | `-4px 0 12px rgba(0,0,0,0.1)` | `-4px 0 12px rgba(0,0,0,0.1)` (unchanged) |
+- **Background**: `var(--colors-sand-1)` (#fdfdfc - Warm Neutral/Neutral 1)
+- **Box-shadow**: `-4px 0 12px rgba(0,0,0,0.1)`
 
 **Note**: Shadow-4 reference was mentioned but value not yet defined in all-variables.css
 
@@ -172,16 +160,19 @@ Replaced raw token references with semantic equivalents:
 
 ---
 
-## 📈 File Statistics
+## 📈 Updated Structure
 
-| Metric | Before | After | Change |
-|--------|--------|-------|--------|
-| Total lines | 1,224 | 1,519 | +295 lines |
-| DESIGN TOKENS | Line 12 | Line 12 | (unchanged) |
-| **SEMANTIC TOKENS** | — | **Line 88** | ✅ NEW |
-| COMPONENT LIBRARY | Line 86 | Line 283 | (moved) |
-| **ADMIN LAYOUT GRID** | — | **Line 1369** | ✅ NEW |
-| USAGE GUIDELINES | Line 1189 | Line 1454 | (moved) |
+The SKILL.md has been reorganized with the following sections:
+
+| Section | Line | Description |
+|---------|------|-------------|
+| DESIGN TOKENS | Line 16 | Core color, spacing, radius tokens |
+| **SEMANTIC TOKENS** | Line 90 | ✅ NEW - Preferred token layer (`--sem-*`) |
+| COMPONENT LIBRARY | Line 220 | Radix UI usage guidelines |
+| PLATFORM ADMIN LAYOUT | Line 240 | Sidebar, Header, Drawer specifications |
+| **ADMIN LAYOUT GRID** | Line 380 | ✅ NEW - 12-column grid system |
+| USAGE GUIDELINES | Line 480 | Token priority and usage patterns |
+| COMPONENT RULES | Line 550 | Button, form, table specifications |
 
 ---
 
@@ -253,19 +244,32 @@ When creating mockups:
 
 ---
 
-## ✅ Validation Checklist
+## ✅ Implementation Checklist
 
 When creating new admin pages, verify:
 
-- [ ] Sidebar width is 256px (expanded) / 64px (collapsed)
-- [ ] Header height is 56px
-- [ ] Background color is `var(--colors-sand-1)`
-- [ ] Using semantic tokens (`--sem-*`) for colors
-- [ ] Following 12-column grid with allowed spans only
+**Layout:**
+- [ ] Sidebar width: 256px (expanded) / 64px (collapsed)
+- [ ] Header height: 56px
+- [ ] Drawer width: 720px (if used)
+- [ ] Following 12-column grid with allowed spans only (12/8/6/4/3)
+
+**Colors:**
+- [ ] Background: `var(--colors-sand-1)` (Warm Neutral/Neutral 1)
+- [ ] Borders: `var(--colors-sand-3)` (Warm Neutral/Neutral 3) for accents
+- [ ] Using semantic tokens (`--sem-*`) for all colors
+- [ ] Input focus/active border: `var(--colors-equ-blue-alpha-8)`
+
+**Spacing:**
 - [ ] Vertical spacing uses `--sem-space-*` tokens
-- [ ] Drawer width is 720px (if used)
+- [ ] Major blocks: `--sem-space-8` (48px)
+- [ ] Related groups: `--sem-space-6` (32px)
+- [ ] Form fields: `--sem-space-4` (16px)
+
+**Interactions:**
 - [ ] Tooltip appears on collapsed sidebar hover
-- [ ] All interactive states defined (hover, active, focus)
+- [ ] All interactive states defined (hover, active, focus, disabled)
+- [ ] Focus ring visible: `--sem-focus-ring`
 
 ---
 
@@ -294,6 +298,6 @@ When creating new admin pages, verify:
 
 ---
 
-**Last Updated**: 2026-02-20  
+**Last Updated**: 2026-02-20 
 **Updated By**: Design System Team  
 **Version**: 2.0
