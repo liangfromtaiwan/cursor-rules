@@ -132,7 +132,7 @@ alwaysApply: false
 | 公司 Design tokens（必用） | `.cursor/company-design-system/all-variables.css` |
 | 規格更新與檢查表 | `.cursor/company-design-system/Claude-design-system-updates-2026-02-20.md` |
 | **UX writing**（介面文案，日／英必讀文件路徑） | **`.cursor/company-design-system/ux-writing.md`** |
-| Platform 範例（layout、表格、表單、Dialog） | `docs/design-examples/Platform example` |
+| Platform 範例（layout、表格、表單、Dialog） | `.cursor/company-design-system/design-examples/Platform example` |
 
 Platform 範例含：登入、Sidebar 展開/收合、Drawer、平台主畫面+表格、Dialog / Alert Dialog。實作 admin/platform 時須與其 layout、導航、表格、表單、對話框模式一致。
 
