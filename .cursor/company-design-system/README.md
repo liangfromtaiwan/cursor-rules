@@ -7,11 +7,13 @@
 
 ## 資料夾內容
 
-| 檔案 | 說明 |
+| 項目 | 說明 |
 |------|------|
 | **all-variables.css** | 公司唯一 design tokens 來源（顏色、間距、圓角、語意 token `--sem-*` 等）。實作時必須引入，且**禁止硬編碼**色碼或魔術數字。 |
 | **Claude-design-system-updates-2026-02-20.md** | 元件規格更新與使用指南（Sidebar、Header、Drawer、網格、token 優先順序、驗收檢查表）。 |
 | **ux-writing.md** | UX writing 規則：英文／日文介面文案必讀文件路徑與摘要。 |
+| **design-examples/** | 設計範例：`Platform example`、`Learner example`（可下載給同事參考）。 |
+| **ux-writing-guidelines/** | UX 撰寫指南：`English`（Platform UX Writing Guideline）、`日本語`（ガイドライン・用語索引）。 |
 | **README.md** | 本說明。 |
 
 ---
@@ -36,4 +38,5 @@
 | 版面 | 12 欄網格，僅允許 span 12 / 8 / 6 / 4 / 3 |
 
 細節見 **Claude-design-system-updates-2026-02-20.md**。  
-Platform／Learner 範例路徑：**`docs/design-examples/Platform example`**、**`docs/design-examples/Learner example`**。
+Platform／Learner 範例：**`.cursor/company-design-system/design-examples/Platform example`**、**`Learner example`**。  
+英文／日文 UX 指南：**`.cursor/company-design-system/ux-writing-guidelines/English`**、**`日本語`**。

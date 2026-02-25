@@ -2,7 +2,8 @@
 
 本文件為公司產品介面文案（UX writing / microcopy）的統一規範，凡按鈕、標籤、錯誤訊息、通知、引導流程、說明文字等**使用者可見文案**皆須遵守。
 
-**語系**：撰寫日文時須符合 Platform UX ライティングガイドライン與用語索引；撰寫英文時須符合 Platform UX Writing Guideline。詳細 Guideline／用語索引由專案或團隊另行提供（例如置於 `docs/ux-writing/`）；以下為必守摘要與原則。
+**語系**：撰寫日文時須符合 Platform UX ライティングガイドライン與用語索引；撰寫英文時須符合 Platform UX Writing Guideline。  
+**本 repo 內指南路徑**：**`.cursor/company-design-system/ux-writing-guidelines/English`**（英文 Guideline）、**`.cursor/company-design-system/ux-writing-guidelines/日本語`**（日文ガイドライン・用語索引）。以下為必守摘要與原則。
 
 ---
 

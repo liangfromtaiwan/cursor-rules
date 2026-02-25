@@ -14,6 +14,8 @@
   - `all-variables.css`：唯一 token 來源
   - `Claude-design-system-updates-2026-02-20.md`：元件規格與檢查表
   - `ux-writing.md`：**UX writing 唯一來源**（英文／日文介面文案、voice/tone、必守摘要）
+  - `design-examples/`：設計範例（Platform example、Learner example），可下載給同事使用
+  - `ux-writing-guidelines/`：UX 撰寫指南（English、日本語），可下載給同事使用
   - `README.md`：設計系統說明
 
 ---
