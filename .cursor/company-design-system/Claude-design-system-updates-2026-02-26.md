@@ -1,3 +1,223 @@
+---
+name: company-design-system
+description: Enforces company UI design system rules including tokens, spacing, accessibility, and component consistency.
+---
+
+
+# Company Product Design System Skill
+
+You are building UI for our company product.
+Follow this design system strictly.
+
+**📋 CHANGELOG**: Recent updates documented in outputs folder.
+
+---
+
+## DESIGN TOKENS
+
+**CRITICAL**: All design tokens are defined. You MUST use these CSS variables - never hardcode values.
+
+### Core Color Tokens
+```css
+/* EQU Blue (Primary Brand) */
+--colors-equ-blue-9: #033256;       /* Primary CTA */
+--colors-equ-blue-10: darker;       /* Primary hover */
+--colors-equ-blue-11: even darker;  /* Primary active */
+--colors-equ-blue-alpha-8: rgba(3, 50, 86, 0.55); /* Focus/Active borders */
+
+/* Red (Danger) */
+--colors-red-red-9: #e5484d;        /* Danger CTA */
+--colors-red-red-10: #dc3e42;       /* Danger hover */
+
+/* Green (Success) */
+--colors-green-11: #218358;         /* Success state */
+--colors-green-2: #f4fbf6;          /* Success soft bg */
+
+/* Sand (Warm Neutrals) */
+--colors-sand-1: #fdfdfc;           /* Warm Neutral/Neutral 1 */
+--colors-sand-2: #f9f9f8;           /* Canvas background */
+--colors-sand-3: #f1f2f2;           /* Warm Neutral/Neutral 3 */
+--colors-sand-6: border default;
+--colors-sand-9: disabled;
+--colors-sand-10: tertiary text;
+--colors-sand-11: secondary text;
+--colors-sand-12: primary text (darkest);
+```
+
+### Spacing Tokens (8pt system)
+```css
+--spacing-1: 4px;    /* Tiny */
+--spacing-2: 8px;    /* Small */
+--spacing-3: 12px;   /* Medium-small */
+--spacing-4: 16px;   /* Medium */
+--spacing-5: 24px;   /* Medium-large */
+--spacing-6: 32px;   /* Large */
+--spacing-7: 40px;   /* X-large */
+--spacing-8: 48px;   /* XX-large */
+--spacing-9: 64px;   /* XXX-large */
+```
+
+### Border Radius Tokens
+```css
+--radius-1: 3px;     /* Tiny */
+--radius-2: 4px;     /* Small */
+--radius-3: 6px;     /* Medium */
+--radius-4: 8px;     /* Large */
+--radius-full: 9999px; /* Pill */
+```
+
+### Component-Specific Tokens
+```css
+/* Button Heights */
+--tokens-space-button-height-1: 24px;  /* Small */
+--tokens-space-button-height-2: 32px;  /* Medium (default) */
+--tokens-space-button-height-3: 40px;  /* Large */
+
+/* Menu Items */
+--tokens-space-menu-item-height-2: 32px;
+
+/* Table Cells */
+--tokens-space-table-cell-min-height-3: 48px;
+```
+
+---
+
+## SEMANTIC TOKENS (優先使用)
+
+**RULE: Always prefer `--sem-*` tokens over raw `--colors-*` tokens.**
+
+```css
+:root {
+  /* Brand / Accent */
+  --sem-brand-primary: var(--colors-equ-blue-9);
+  --sem-brand-primary-hover: var(--colors-equ-blue-10);
+  --sem-brand-primary-active: var(--colors-equ-blue-11);
+  --sem-brand-on-primary: white;
+
+  /* Neutrals (Canvas / Surface) */
+  --sem-bg-canvas: var(--colors-sand-2);
+  --sem-bg-surface: var(--colors-sand-1);     /* Warm Neutral/Neutral 1 */
+
+  --sem-layer-1: var(--colors-sand-1);        /* Cards, Tables, Drawer */
+  --sem-layer-header: var(--colors-sand-3);   /* Top Header Bar */
+  --sem-layer-sidebar: var(--colors-sand-1);  /* Sidebar Navigation */
+  --sem-layer-main: var(--colors-sand-1);     /* Main Content Area */
+  --sem-layer-2: var(--colors-sand-2);        /* Secondary panels */
+  --sem-layer-overlay: rgba(0, 0, 0, 0.5);    /* Modal backdrop */
+
+  /* Text */
+  --sem-text-primary: var(--colors-sand-12);
+  --sem-text-secondary: var(--colors-sand-11);
+  --sem-text-tertiary: var(--colors-sand-10);
+  --sem-text-disabled: var(--colors-sand-9);
+  --sem-text-link: var(--colors-equ-blue-9);
+  --sem-text-on-dark: white;
+
+  /* Border / Divider */
+  --sem-border-default: var(--colors-sand-6);
+  --sem-border-muted: var(--colors-sand-4);
+  --sem-border-accent: var(--colors-sand-3);  /* Warm Neutral/Neutral 3 */
+  --sem-divider: var(--colors-sand-4);
+  --sem-focus-ring: var(--colors-equ-blue-alpha-8);
+
+  /* States */
+  --sem-hover-bg: var(--colors-sand-3);
+  --sem-active-bg: var(--colors-sand-4);
+  --sem-selected-bg: var(--colors-equ-blue-2);
+
+  /* Feedback */
+  --sem-danger: var(--colors-red-red-9);
+  --sem-danger-hover: var(--colors-red-red-10);
+  --sem-success: var(--colors-green-11);
+  --sem-success-soft-bg: var(--colors-green-2);
+
+  /* Buttons */
+  --sem-btn-primary-bg: var(--sem-brand-primary);
+  --sem-btn-primary-text: var(--sem-brand-on-primary);
+  --sem-btn-primary-bg-hover: var(--sem-brand-primary-hover);
+  --sem-btn-primary-bg-active: var(--sem-brand-primary-active);
+
+  --sem-btn-secondary-bg: var(--sem-bg-surface);
+  --sem-btn-secondary-text: var(--sem-text-primary);
+  --sem-btn-secondary-border: var(--sem-border-default);
+  --sem-btn-secondary-bg-hover: var(--sem-hover-bg);
+
+  --sem-btn-danger-bg: var(--sem-danger);
+  --sem-btn-danger-text: white;
+  --sem-btn-danger-bg-hover: var(--sem-danger-hover);
+
+  /* Inputs */
+  --sem-input-bg: var(--sem-bg-surface);
+  --sem-input-border: var(--sem-border-default);
+  --sem-input-border-focus: var(--colors-equ-blue-alpha-8);
+  --sem-input-border-active: var(--colors-equ-blue-alpha-8);
+  --sem-input-placeholder: var(--sem-text-tertiary);
+
+  /* Table */
+  --sem-table-header-bg: var(--sem-bg-surface);
+  --sem-table-row-hover: var(--sem-hover-bg);
+  --sem-table-border: var(--sem-border-muted);
+
+  /* Badges */
+  --sem-badge-success-bg: var(--sem-success-soft-bg);
+  --sem-badge-success-text: var(--sem-success);
+
+  /* Layout scale */
+  --sem-space-1: var(--spacing-1);  /* 4px */
+  --sem-space-2: var(--spacing-2);  /* 8px */
+  --sem-space-3: var(--spacing-3);  /* 12px */
+  --sem-space-4: var(--spacing-4);  /* 16px */
+  --sem-space-5: var(--spacing-5);  /* 24px */
+  --sem-space-6: var(--spacing-6);  /* 32px */
+  --sem-space-7: var(--spacing-7);  /* 40px */
+  --sem-space-8: var(--spacing-8);  /* 48px */
+
+  /* Radius */
+  --sem-radius-sm: var(--radius-2);    /* 4px */
+  --sem-radius-md: var(--radius-3);    /* 6px */
+  --sem-radius-lg: var(--radius-4);    /* 8px */
+  --sem-radius-full: var(--radius-full);
+}
+```
+
+### Semantic Token Quick Reference
+
+| Use Case | Token | Maps To |
+|----------|-------|---------|
+| Primary button bg | `--sem-btn-primary-bg` | `--colors-equ-blue-9` |
+| Danger button bg | `--sem-btn-danger-bg` | `--colors-red-red-9` |
+| Sidebar/Drawer bg | `--sem-layer-sidebar` | `--colors-sand-1` (#fdfdfc) |
+| Header bg | `--sem-layer-header` | `--colors-sand-3` (#f1f2f2) |
+| Main content bg | `--sem-layer-main` | `--colors-sand-1` (#fdfdfc) |
+| Page background | `--sem-bg-canvas` | `--colors-sand-2` |
+| Primary text | `--sem-text-primary` | `--colors-sand-12` |
+| Border default | `--sem-border-default` | `--colors-sand-6` |
+| Border accent | `--sem-border-accent` | `--colors-sand-3` (#f1f2f2) |
+| Hover bg | `--sem-hover-bg` | `--colors-sand-3` |
+| Input border (default) | `--sem-input-border` | `--colors-sand-6` |
+| Input border (focus/active) | `--sem-input-border-focus` | `--colors-equ-blue-alpha-8` |
+| Focus ring | `--sem-focus-ring` | `--colors-equ-blue-alpha-8` |
+
+---
+
+## COMPONENT LIBRARY
+
+**We use Radix UI as our component library.**
+
+All UI components must be built using Radix UI primitives:
+- Use Radix for all interactive elements (Dialog, DropdownMenu, Select, etc.)
+- Style with semantic tokens (`--sem-*`)
+- Never override accessibility features
+- Maintain keyboard navigation and ARIA attributes
+
+**Fallback**: When Radix doesn't provide a component, use semantic HTML with design tokens and manual accessibility.
+
+---
+
+## PLATFORM ADMIN LAYOUT SPECIFICATIONS
+
+### 1. SIDEBAR NAVIGATION
+
 **Dimensions:**
 - Width (expanded): **256px**
 - Width (collapsed): **64px**
